@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="0dV-fK-WiG">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zPt-QA-Arm">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="0dV-fK-WiG" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8fz-NM-H5A">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="F8n-un-aqs" kind="relationship" relationship="rootViewController" id="IYk-pp-6Bt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89R-YD-RzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223" y="-72"/>
+        </scene>
+        <!--List View Controller - \ﾏｯｾｻｰﾝ/ コンプガチャ-->
+        <scene sceneID="NpC-si-tEV">
+            <objects>
+                <viewController id="F8n-un-aqs" customClass="ListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9gl-JO-WnT">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fGH-z3-XsP">
+                                <rect key="frame" x="66" y="288" width="182" height="61"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="ガチャる">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KE4-hS-oe3" kind="push" identifier="pushToDetail" id="h00-hm-Ckn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="00.png" id="QoC-u8-VDU">
+                                <rect key="frame" x="20" y="86" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="01.png" id="FRv-pV-nGq">
+                                <rect key="frame" x="120" y="86" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="03.png" id="s7p-x6-ome">
+                                <rect key="frame" x="66" y="174" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="04.png" id="h2R-ot-LKB">
+                                <rect key="frame" x="168" y="174" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="02.png" id="arN-ep-MbS">
+                                <rect key="frame" x="220" y="86" width="80" height="80"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="\ﾏｯｾｻｰﾝ/ コンプガチャ" id="9aE-CW-M8b"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="maseImage0" destination="QoC-u8-VDU" id="IuJ-h2-27l"/>
+                        <outlet property="maseImage1" destination="FRv-pV-nGq" id="hZd-4U-SWM"/>
+                        <outlet property="maseImage2" destination="arN-ep-MbS" id="7gl-ja-Gxb"/>
+                        <outlet property="maseImage3" destination="s7p-x6-ome" id="HeU-Ne-GJG"/>
+                        <outlet property="maseImage4" destination="h2R-ot-LKB" id="f4l-Jf-rua"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7vd-HF-01N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="-72"/>
+        </scene>
+        <!--Detail View Controller - GET!-->
+        <scene sceneID="P1P-7B-vOL">
+            <objects>
+                <viewController id="KE4-hS-oe3" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5w8-Fr-5NH">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="dRl-kS-yl8">
+                                <rect key="frame" x="20" y="68" width="280" height="280"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="GET!" id="Nur-rK-tYD"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="dRl-kS-yl8" id="g8a-47-8QF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jg6-sL-ZDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="-72"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="00.png" width="500" height="500"/>
+        <image name="01.png" width="500" height="500"/>
+        <image name="02.png" width="500" height="500"/>
+        <image name="03.png" width="500" height="500"/>
+        <image name="04.png" width="500" height="500"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
