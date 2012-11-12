@@ -10,8 +10,8 @@
 
 @interface ListViewController : UIViewController
 {
-    NSArray *_imageViewArray;
-    NSMutableArray *_statusArray;
+    NSArray *_imageViews;
+    BOOL _statuses[5];
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *maseImage0;

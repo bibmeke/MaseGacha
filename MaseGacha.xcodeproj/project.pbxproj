@@ -99,10 +99,10 @@
 				E2D44058162718940069AD97 /* AppDelegate.h */,
 				E2D44059162718940069AD97 /* AppDelegate.m */,
 				E2D44066162718AF0069AD97 /* MainStoryboard.storyboard */,
-				E2D4406B1627199D0069AD97 /* DetailViewController.h */,
-				E2D4406C1627199D0069AD97 /* DetailViewController.m */,
 				E2D440681627198E0069AD97 /* ListViewController.h */,
 				E2D440691627198E0069AD97 /* ListViewController.m */,
+				E2D4406B1627199D0069AD97 /* DetailViewController.h */,
+				E2D4406C1627199D0069AD97 /* DetailViewController.m */,
 				E2D44050162718940069AD97 /* Supporting Files */,
 				E2D4406E16271CA10069AD97 /* Images */,
 			);

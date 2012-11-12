@@ -31,8 +31,12 @@
     [super viewDidLoad];
     
     // ImageViewを配列に突っ込んどく
-    _imageViewArray = @[self.maseImage0, self.maseImage1, self.maseImage2, self.maseImage3, self.maseImage4];
-    _statusArray = [@[@NO, @NO, @NO, @NO, @NO] mutableCopy];
+    _imageViews = @[self.maseImage0, self.maseImage1, self.maseImage2, self.maseImage3, self.maseImage4];
+
+    // 状態の初期化
+    for(NSInteger i=0; i<_imageViews.count; i++) {
+        _statuses[i] = NO;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -55,7 +59,7 @@
 // 全部隠す
 - (void)hideAllImage
 {
-    for(UIImageView *imageView in _imageViewArray) {
+    for(UIImageView *imageView in _imageViews) {
         imageView.hidden = YES;
     }
 }
@@ -67,10 +71,10 @@
     [self hideAllImage];
     
     // 表示するかどうか
-    for(NSInteger i=0; i<_imageViewArray.count; i++)
+    for(NSInteger i=0; i<_imageViews.count; i++)
     {
-        UIImageView *imageView = (UIImageView *)_imageViewArray[i];
-        imageView.hidden = ![_statusArray[i] boolValue];
+        UIImageView *imageView = (UIImageView *)_imageViews[i];
+        imageView.hidden = !_statuses[i];
         
         // 保存するなら
         /*
@@ -97,7 +101,7 @@
         NSInteger selected = [self randomSelect];
         
         // 表示
-        _statusArray[selected] = @YES;
+        _statuses[selected] = YES;
         
         // 保存するなら
         /*
@@ -110,7 +114,7 @@
         DetailViewController *controller = (DetailViewController *)[segue destinationViewController];
         
         // UIImageViewからランダムに一つ
-        UIImageView *imageView = (UIImageView *)_imageViewArray[selected];
+        UIImageView *imageView = (UIImageView *)_imageViews[selected];
         
         // 画像セットしておく
         controller.image = imageView.image;
@@ -123,22 +127,25 @@
 - (NSInteger)randomSelect
 {
     // 確率一覧
-    NSArray *appearanceRatio = @[@100, @70, @30, @10, @1];
+    NSInteger appearanceRatios[] = { 100, 70, 30, 10, 1 };
 
     // sum計算
     NSInteger random=0, sum=0;
-    for(NSNumber *n in appearanceRatio) {
-        sum += [n integerValue];
+    for(NSInteger i=0; i<_imageViews.count; i++)
+    {
+        sum += appearanceRatios[i];
     }
     
     // 乱数
-    if(sum>0) {
+    if(sum>0)
+    {
         random = rand() % sum;
     }
     
     NSInteger csum=0, cur=0;
-    for(NSNumber *n in appearanceRatio) {
-        csum += [n integerValue];
+    for(NSInteger i=0; i<_imageViews.count; i++)
+    {
+        csum += appearanceRatios[i];
         if(random < csum) {
             break;
         }
