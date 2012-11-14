@@ -14,10 +14,10 @@
     BOOL _statuses[5];
 }
 
-@property (weak, nonatomic) IBOutlet UIImageView *maseImage0;
-@property (weak, nonatomic) IBOutlet UIImageView *maseImage1;
-@property (weak, nonatomic) IBOutlet UIImageView *maseImage2;
-@property (weak, nonatomic) IBOutlet UIImageView *maseImage3;
-@property (weak, nonatomic) IBOutlet UIImageView *maseImage4;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView0;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView1;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView2;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView3;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView4;
 
 @end

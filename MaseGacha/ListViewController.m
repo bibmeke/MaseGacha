@@ -30,9 +30,9 @@
 {
     [super viewDidLoad];
     
-    // ImageViewを配列に突っ込んどく
-    _imageViews = @[self.maseImage0, self.maseImage1, self.maseImage2, self.maseImage3, self.maseImage4];
-
+    // UIImageViewを配列にまとめておく
+    _imageViews = @[self.imageView0, self.imageView1, self.imageView2, self.imageView3, self.imageView4];
+    
     // 状態の初期化
     for(NSInteger i=0; i<_imageViews.count; i++) {
         _statuses[i] = NO;
@@ -56,20 +56,9 @@
 
 #pragma mark - Image View 
 
-// 全部隠す
-- (void)hideAllImage
-{
-    for(UIImageView *imageView in _imageViews) {
-        imageView.hidden = YES;
-    }
-}
-
 // 表示・非表示を切り替える
 - (void)setHiddenFromStatus
 {
-    // まずは全部隠す
-    [self hideAllImage];
-    
     // 表示するかどうか
     for(NSInteger i=0; i<_imageViews.count; i++)
     {

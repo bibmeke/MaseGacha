@@ -42,7 +42,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="00.png" id="QoC-u8-VDU">
                                 <rect key="frame" x="20" y="86" width="80" height="80"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="01.png" id="FRv-pV-nGq">
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" image="01.png" id="FRv-pV-nGq">
                                 <rect key="frame" x="120" y="86" width="80" height="80"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="03.png" id="s7p-x6-ome">
@@ -61,11 +61,16 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="maseImage0" destination="QoC-u8-VDU" id="IuJ-h2-27l"/>
-                        <outlet property="maseImage1" destination="FRv-pV-nGq" id="hZd-4U-SWM"/>
-                        <outlet property="maseImage2" destination="arN-ep-MbS" id="7gl-ja-Gxb"/>
-                        <outlet property="maseImage3" destination="s7p-x6-ome" id="HeU-Ne-GJG"/>
-                        <outlet property="maseImage4" destination="h2R-ot-LKB" id="f4l-Jf-rua"/>
+                        <outlet property="imageView0" destination="QoC-u8-VDU" id="Nnd-1Q-L9S"/>
+                        <outlet property="imageView1" destination="FRv-pV-nGq" id="eUv-uA-F8J"/>
+                        <outlet property="imageView2" destination="arN-ep-MbS" id="jgh-7A-DKn"/>
+                        <outlet property="imageView3" destination="s7p-x6-ome" id="8I9-Sv-2Vw"/>
+                        <outlet property="imageView4" destination="h2R-ot-LKB" id="U2M-M8-uT7"/>
+                        <outletCollection property="imageViews" destination="h2R-ot-LKB" id="P28-2R-skn"/>
+                        <outletCollection property="imageViews" destination="s7p-x6-ome" id="sgZ-Gn-tHx"/>
+                        <outletCollection property="imageViews" destination="arN-ep-MbS" id="jjl-fN-cdM"/>
+                        <outletCollection property="imageViews" destination="FRv-pV-nGq" id="oIB-Au-7Ia"/>
+                        <outletCollection property="imageViews" destination="QoC-u8-VDU" id="Ds1-4u-NhC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vd-HF-01N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,24 +110,6 @@
         <image name="03.png" width="500" height="500"/>
         <image name="04.png" width="500" height="500"/>
     </resources>
-    <classes>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="ListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="maseImage0" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="maseImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="maseImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="maseImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="maseImage4" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
